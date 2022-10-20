@@ -17,19 +17,19 @@ public class EvenNumbers {
             String playerAnswer = in.nextLine();
 
             if (randomNumber % 2 == 0 && playerAnswer.equals("yes")) {
-                System.out.println("Correct!");
+                Engine.correct();
                 counter++;
             } else if (randomNumber % 2 != 0 && playerAnswer.equals("no")) {
-                System.out.println("Correct!");
+                Engine.correct();
                 counter++;
             } else if (randomNumber % 2 == 0 && playerAnswer.equals("no")) {
-                System.out.println("'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again");
+                Engine.uncorrectNo();
                 break;
             } else if (randomNumber % 2 != 0 && playerAnswer.equals("yes")) {
-                System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again");
+                Engine.uncorrectYes();
                 break;
             } else if (!playerAnswer.equals("yes") || !playerAnswer.equals("no")) {
-                System.out.println("Your answer is wrong ;(.\nLet's try again");
+                Engine.uncorrectInput();
                 break;
             }
             if (counter == 3) {
