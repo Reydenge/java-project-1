@@ -3,4 +3,4 @@
 
 <a href="https://codeclimate.com/github/Reydenge/java-project-61/maintainability"><img src="https://api.codeclimate.com/v1/badges/7fe4137899b62e43af2e/maintainability" /></a>
 
-https://asciinema.org/a/1XkqYod5WXyUZxdM8yhSSIxN1
+asciinema clip for game 2 - https://asciinema.org/a/1XkqYod5WXyUZxdM8yhSSIxN1
