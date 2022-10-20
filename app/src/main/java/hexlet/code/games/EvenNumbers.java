@@ -28,7 +28,7 @@ public class EvenNumbers {
             } else if (randomNumber % 2 != 0 && playerAnswer.equals("yes")) {
                 Engine.uncorrectYes();
                 break;
-            } else if (!playerAnswer.equals("yes") || !playerAnswer.equals("no")) {
+            } else {
                 Engine.uncorrectInput();
                 break;
             }
