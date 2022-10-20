@@ -1,4 +1,7 @@
 package hexlet.code;
+import hexlet.code.games.Calculator;
+import hexlet.code.games.EvenNumbers;
+
 import java.util.Scanner;
 public class App {
     public static void main(String[] args) {
@@ -11,12 +14,13 @@ public class App {
             case 0:
                 return;
             case 1:
-                System.out.println("Welcome to the Brain Games!");
-                Cli.getName();
+                Cli.greeting();
                 break;
             case 2:
-                GamesLogic.evenNumbers();
+                EvenNumbers.identifyEvenNumbers();
                 break;
+            case 3:
+                Calculator.calculation();
         }
     }
 }
