@@ -1,6 +1,6 @@
 package hexlet.code;
-import hexlet.code.games.Calculator;
-import hexlet.code.games.EvenNumbers;
+import hexlet.code.games.GameEven;
+import hexlet.code.games.GameCalc;
 
 import java.util.Scanner;
 public class App {
@@ -17,10 +17,10 @@ public class App {
                 Cli.greeting();
                 break;
             case 2:
-                EvenNumbers.identifyEvenNumbers();
+                GameEven.identifyEvenNumbers();
                 break;
             case 3:
-                Calculator.calculation();
+                GameCalc.calculation();
         }
     }
 }
