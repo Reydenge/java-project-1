@@ -1,18 +1,22 @@
 package hexlet.code.games;
-import hexlet.code.Cli;
 import hexlet.code.Engine;
 
-import java.util.Scanner;
-
 public class GameEven {
+    public static String gameDescription = "Answer 'yes' if the number is even, otherwise answer 'no'.\n";
+    private static boolean isEven(int number) {
+        return (number % 2 == 0); }
     public static void identifyEvenNumbers() {
-        Scanner in = new Scanner(System.in);
-        Cli.greeting();
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        int randomNumber = Engine.getRandomNumber();
-        Engine.question(randomNumber);
-        String rightAnswer = randomNumber%2 == 0 ? "yes" : "no";
-        String playerAnswer = in.nextLine();
-        Engine.checkAnswerWord(playerAnswer, rightAnswer);
+        Engine.greeting();
+        String[][] gameData = new String[Engine.pointsToWin][2];
+        for (int i = 0; i < Engine.pointsToWin; i++) {
+            int randomNumber = Engine.getRandomNumber();
+            gameData[i][Engine.dataPlayerAnswer] = Integer.toString(randomNumber);
+            if (isEven(randomNumber)) {
+                gameData[i][Engine.dataRightAnswer] = "yes";
+            } else {
+                gameData[i][Engine.dataRightAnswer] = "no";
             }
         }
+        Engine.checkAnswerWord(gameData, gameDescription);
+    }
+}
