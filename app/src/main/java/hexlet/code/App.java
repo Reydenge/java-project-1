@@ -1,4 +1,5 @@
 package hexlet.code;
+import hexlet.code.games.GameArithProg;
 import hexlet.code.games.GameEven;
 import hexlet.code.games.GameCalc;
 import hexlet.code.games.GameGCD;
@@ -10,6 +11,7 @@ public class App {
     static final int GAME_EVEN_NUMBERS = 2;
     static final int GAME_CALCULATOR = 3;
     static final int GAME_GCD = 4;
+    static final int GAME_ARITHMETIC_PROGRESSION = 5;
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("""
@@ -18,6 +20,7 @@ public class App {
                  2 - Even\s
                  3 - Calc\s
                  4 - GCD\s
+                 5 - Progression\s
                  0 - Exit""");
         int gameNumber = in.nextInt();
         System.out.println("Your choice: " + gameNumber + "\n");
@@ -37,6 +40,8 @@ public class App {
             case GAME_GCD:
                 GameGCD.calculateGCD();
                 break;
+            case GAME_ARITHMETIC_PROGRESSION:
+                GameArithProg.createArithmeticProgression();
             default:
         }
     }
