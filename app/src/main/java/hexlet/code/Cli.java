@@ -11,7 +11,7 @@ public class Cli {
         playerName = in.nextLine();
         System.out.println("Hello, " + playerName + "!");
     }
-    public static String getPlayerName(){
+    public static String getName() {
         return playerName;
     }
 
