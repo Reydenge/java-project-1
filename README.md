@@ -6,3 +6,5 @@ Even Numbers - https://asciinema.org/a/MWnADjv9gFn0GqYakNa1ZScqx
 Calculator - https://asciinema.org/a/tWWs4z45v7Q6RCudpkNTVSgMJ
 
 Greatest common divisor - https://asciinema.org/a/eA9rSIfAkijprScZVxj5jTYBc
+
+Missing element of arithmetic progression - https://asciinema.org/a/zs79YRrVMBfKCMFIlJL5AXl0Q
