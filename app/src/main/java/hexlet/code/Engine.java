@@ -12,6 +12,10 @@ public class Engine {
         return (int) (Math.random() * (200 - 10 + 1) + 10);
     }
 
+    public static int getLimitedRandomNumber(int limit) {
+        return (int) (Math.random() * limit);
+    }
+
     public static String playerAnswerString() {
         Scanner in = new Scanner(System.in);
         return in.nextLine();
@@ -41,7 +45,7 @@ public class Engine {
                 System.out.println("Correct!");
                 count++;
             } else {
-                System.out.println("'" + playerAnswer + "'" + " is wrong answer ;(. Correct answer was " + "'" + dataGame[count][dataRightAnswer] + "'. Let's try again, " + getPlayerName() + "!");
+                System.out.println("'" + playerAnswer + "'" + " is wrong answer ;(. Correct answer was " + "'" + dataGame[count][dataRightAnswer] + "'. " + "\nLet's try again, " + getPlayerName() + "!");
                 return;
             }
         }
