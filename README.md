@@ -8,3 +8,5 @@ Calculator - https://asciinema.org/a/tWWs4z45v7Q6RCudpkNTVSgMJ
 Greatest common divisor - https://asciinema.org/a/eA9rSIfAkijprScZVxj5jTYBc
 
 Missing element of arithmetic progression - https://asciinema.org/a/zs79YRrVMBfKCMFIlJL5AXl0Q
+
+Prime Number - https://asciinema.org/a/kIslTUtHk4SFnoHIsmBkla0gJ
