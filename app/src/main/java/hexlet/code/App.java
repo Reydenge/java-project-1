@@ -45,9 +45,12 @@ public class App {
                 break;
             case GAME_ARITHMETIC_PROGRESSION:
                 GameArithProg.createArithmeticProgression();
+                break;
             case GAME_PRIME_NUMBER:
                 GamePrimeNum.identifyPrimeNumber();
+                break;
             default:
+                System.out.println("There is no such game, sorry.");
         }
     }
 }
