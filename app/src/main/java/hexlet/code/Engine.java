@@ -31,7 +31,7 @@ public class Engine {
         return playerName;
     }
     public static void congratulation(String name) {
-        System.out.println("Congratulation, " + name + "!");
+        System.out.println("Congratulations, " + name + "!");
     }
     public static void checkAnswerWord(String[][] dataGame, String gameDescription) {
         int count = 0;
