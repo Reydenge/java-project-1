@@ -1,8 +1,9 @@
 package hexlet.code;
-import hexlet.code.games.GameArithProg;
 import hexlet.code.games.GameEven;
 import hexlet.code.games.GameCalc;
 import hexlet.code.games.GameGCD;
+import hexlet.code.games.GameArithProg;
+import hexlet.code.games.GamePrimeNum;
 
 import java.util.Scanner;
 public class App {
@@ -12,6 +13,7 @@ public class App {
     static final int GAME_CALCULATOR = 3;
     static final int GAME_GCD = 4;
     static final int GAME_ARITHMETIC_PROGRESSION = 5;
+    static final int GAME_PRIME_NUMBER = 6;
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("""
@@ -21,6 +23,7 @@ public class App {
                  3 - Calc\s
                  4 - GCD\s
                  5 - Progression\s
+                 6 - Prime\s
                  0 - Exit""");
         int gameNumber = in.nextInt();
         System.out.println("Your choice: " + gameNumber + "\n");
@@ -42,6 +45,8 @@ public class App {
                 break;
             case GAME_ARITHMETIC_PROGRESSION:
                 GameArithProg.createArithmeticProgression();
+            case GAME_PRIME_NUMBER:
+                GamePrimeNum.identifyPrimeNumber();
             default:
         }
     }
