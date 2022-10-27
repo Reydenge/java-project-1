@@ -1,13 +1,14 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.RandomUtils;
 
 public class GameArithProg {
     public static String gameDescription = "What number is missing in the progression?\n";
-    public static int maxLengthOfProgression = 10;
-    public static int firstElementOfProgression = 10;
-    public static int maxStepOfProgression = 10;
-    public static int maxNumberOfMissingElement = 9;
+    public static int MAX_LENGTH_OF_PROGRESSION = 10;
+    public static int FIRST_ELEMENT_OF_PROGRESSION = 10;
+    public static int MAX_STEP_OF_PROGRESSION = 10;
+    public static int MAX_NUMBER_OF_MISSING_ELEMENT = 9;
 
     public static int[] getArithmeticProgression(int firstElement, int stepOfProgression, int lengthOfProgression) {
         int[] arithmeticProgression = new int[lengthOfProgression];
@@ -24,26 +25,25 @@ public class GameArithProg {
     public static void createArithmeticProgression() {
         int firstElement;
         int stepOfProgression;
-        String[][] dataGame = new String[Engine.pointsToWin][2];
-        Engine.greeting();
+        String[][] dataGame = new String[Engine.POINTS_TO_WIN][2];
 
-        for (int j = 0; j < Engine.pointsToWin; j++) {
-            firstElement = Engine.getLimitedRandomNumber(firstElementOfProgression);
-            stepOfProgression = Engine.getLimitedRandomNumber(maxStepOfProgression) + 1;
-            int[] arithmeticProgression = getArithmeticProgression(firstElement, stepOfProgression, maxLengthOfProgression);
-            int numberOfMissingElement = Engine.getLimitedRandomNumber(maxNumberOfMissingElement);
-            String tempElement = "";
-            for (int p = 0; p < maxLengthOfProgression; p++) {
+        for (int j = 0; j < Engine.POINTS_TO_WIN; j++) {
+            firstElement = RandomUtils.getLimitedRandomNumber(FIRST_ELEMENT_OF_PROGRESSION);
+            stepOfProgression = RandomUtils.getLimitedRandomNumber(MAX_STEP_OF_PROGRESSION) + 1;
+            int[] arithmeticProgression = getArithmeticProgression(firstElement, stepOfProgression, MAX_LENGTH_OF_PROGRESSION);
+            int numberOfMissingElement = RandomUtils.getLimitedRandomNumber(MAX_NUMBER_OF_MISSING_ELEMENT);
+            StringBuilder tempElement = new StringBuilder("");
+            for (int p = 0; p < MAX_LENGTH_OF_PROGRESSION; p++) {
                 if (p == numberOfMissingElement) {
-                    tempElement = tempElement.concat(".. ");
+                    tempElement.append(".. ");
                 } else {
-                    tempElement = tempElement.concat(Integer.toString(arithmeticProgression[p]));
-                    tempElement = tempElement.concat(" ");
+                    tempElement.append(Integer.toString(arithmeticProgression[p]));
+                    tempElement.append(" ");
                 }
             }
-            dataGame[j][Engine.dataPlayerAnswer] = tempElement;
-            dataGame[j][Engine.dataRightAnswer] = Integer.toString(arithmeticProgression[numberOfMissingElement]);
+            dataGame[j][Engine.DATA_QUESTION] = String.valueOf(tempElement);
+            dataGame[j][Engine.DATA_RIGHT_ANSWER] = Integer.toString(arithmeticProgression[numberOfMissingElement]);
         }
-        Engine.checkAnswerWord(dataGame, gameDescription);
+        Engine.launchAnswerChecking(dataGame, gameDescription);
     }
 }
