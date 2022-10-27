@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class Engine {
     public static final int POINTS_TO_WIN = 3;
     public static final int DATA_QUESTION = 0;
-    public static final int DATA_RIGHT_ANSWER = 1;
-
+    public static final int DATA_ANSWER = 1;
 
     public static String playerAnswerString() {
         Scanner in = new Scanner(System.in);
@@ -25,11 +24,12 @@ public class Engine {
             System.out.println("Question: " + dataGame[count][DATA_QUESTION]);
             System.out.print("Your answer: ");
             playerAnswer = playerAnswerString();
-            if (playerAnswer.equals(dataGame[count][DATA_RIGHT_ANSWER])) {
+            if (playerAnswer.equals(dataGame[count][DATA_ANSWER])) {
                 System.out.println("Correct!");
                 count++;
             } else {
-                System.out.println("'" + playerAnswer + "'" + " is wrong answer ;(. Correct answer was " + "'" + dataGame[count][DATA_RIGHT_ANSWER] + "'. " + "\nLet's try again, " + playerName + "!");
+                System.out.println("'" + playerAnswer + "'" + " is wrong answer ;(. Correct answer was '"
+                        + dataGame[count][DATA_ANSWER] + "'. \nLet's try again, " + playerName + "!");
                 return;
             }
         }
