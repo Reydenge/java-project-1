@@ -4,7 +4,7 @@ import hexlet.code.RandomUtils;
 
 public class GameCalc {
     private static String gameDescription = "What is the result of the expression?\n";
-    private final static int NUMBER_OF_OPETAROTS = 3;
+    private static final int NUMBER_OF_OPERATORS = 3;
     private static String[] listOfOperators = {"+", "-", "*"};
     private static int expression(int firstNumber, int secondNumber, String operator) {
         return switch (operator) {
@@ -20,11 +20,11 @@ public class GameCalc {
         int secondNumber;
         String[][] dataGame = new String[Engine.POINTS_TO_WIN][2];
         for (int i = 0; i < Engine.POINTS_TO_WIN; i++) {
-            firstNumber = RandomUtils.getRandomNumber();
-            secondNumber = RandomUtils.getRandomNumber();
-            randomExpression = listOfOperators[RandomUtils.getLimitedRandomNumber(NUMBER_OF_OPETAROTS)];
+            firstNumber = RandomUtils.getLimitedRandomNumber(RandomUtils.MAX_NUMBER);
+            secondNumber = RandomUtils.getLimitedRandomNumber(RandomUtils.MAX_NUMBER);
+            randomExpression = listOfOperators[RandomUtils.getLimitedRandomNumber(NUMBER_OF_OPERATORS)];
             dataGame[i][Engine.DATA_QUESTION] = firstNumber + " " + randomExpression + " " + secondNumber;
-            dataGame[i][Engine.DATA_RIGHT_ANSWER] = String.valueOf(expression(firstNumber, secondNumber, randomExpression));
+            dataGame[i][Engine.DATA_ANSWER] = String.valueOf(expression(firstNumber, secondNumber, randomExpression));
         }
         Engine.launchAnswerChecking(dataGame, gameDescription);
     }

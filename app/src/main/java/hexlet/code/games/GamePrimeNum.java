@@ -17,9 +17,9 @@ public class GamePrimeNum {
         int randomNumber;
         String[][] dataGame = new String[Engine.POINTS_TO_WIN][2];
         for (int i = 0; i < Engine.POINTS_TO_WIN; i++) {
-            randomNumber = RandomUtils.getRandomNumber();
+            randomNumber = RandomUtils.getLimitedRandomNumber(RandomUtils.MAX_NUMBER);
             dataGame[i][Engine.DATA_QUESTION] = Integer.toString(randomNumber);
-            dataGame[i][Engine.DATA_RIGHT_ANSWER] = isPrime(randomNumber) ? "yes" : "no";
+            dataGame[i][Engine.DATA_ANSWER] = isPrime(randomNumber) ? "yes" : "no";
         }
         Engine.launchAnswerChecking(dataGame, gameDescription);
     }
