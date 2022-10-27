@@ -6,7 +6,7 @@ import hexlet.code.RandomUtils;
 import java.math.BigInteger;
 
 public class GamePrimeNum {
-    public static String gameDescription = "Answer 'yes' if given number is prime. Otherwise answer 'no'.\n";
+    private static String gameDescription = "Answer 'yes' if given number is prime. Otherwise answer 'no'.\n";
 
     public static boolean isPrime(int number) {
         BigInteger bigInteger = BigInteger.valueOf(number);
