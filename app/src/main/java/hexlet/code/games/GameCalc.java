@@ -4,7 +4,7 @@ import hexlet.code.RandomUtils;
 
 public class GameCalc {
     private static String gameDescription = "What is the result of the expression?\n";
-    private static int NUMBER_OF_OPETAROTS = 3;
+    private final static int NUMBER_OF_OPETAROTS = 3;
     private static String[] listOfOperators = {"+", "-", "*"};
     private static int expression(int firstNumber, int secondNumber, String operator) {
         return switch (operator) {
