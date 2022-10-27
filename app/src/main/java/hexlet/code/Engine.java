@@ -3,9 +3,9 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    public final static int POINTS_TO_WIN = 3;
-    public final static int DATA_QUESTION = 0;
-    public final static int DATA_RIGHT_ANSWER = 1;
+    public static final int POINTS_TO_WIN = 3;
+    public static final int DATA_QUESTION = 0;
+    public static final int DATA_RIGHT_ANSWER = 1;
 
 
     public static String playerAnswerString() {
