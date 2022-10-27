@@ -1,31 +1,31 @@
 package hexlet.code.games;
 import hexlet.code.Engine;
+import hexlet.code.RandomUtils;
 
 public class GameCalc {
     private static String gameDescription = "What is the result of the expression?\n";
+    private static int NUMBER_OF_OPETAROTS = 3;
     private static String[] listOfOperators = {"+", "-", "*"};
     private static int expression(int firstNumber, int secondNumber, String operator) {
         return switch (operator) {
             case "+" -> firstNumber + secondNumber;
             case "-" -> firstNumber - secondNumber;
             case "*" -> firstNumber * secondNumber;
-            default -> 0;
+            default -> throw new IllegalStateException("Unexpected operator");
         };
     }
     public static void calculation() {
         String randomExpression;
         int firstNumber;
         int secondNumber;
-        String[][] dataGame = new String[Engine.pointsToWin][2];
-        Engine.greeting();
-        for (int i = 0; i < Engine.pointsToWin; i++) {
-            firstNumber = Engine.getRandomNumber();
-            secondNumber = Engine.getRandomNumber();
-            int numberOfOperators = 3;
-            randomExpression = listOfOperators[Engine.getLimitedRandomNumber(numberOfOperators)];
-            dataGame[i][Engine.dataPlayerAnswer] = Integer.toString(firstNumber) + " " + randomExpression + " " + Integer.toString(secondNumber);
-            dataGame[i][Engine.dataRightAnswer] = Integer.toString(expression(firstNumber, secondNumber, randomExpression));
+        String[][] dataGame = new String[Engine.POINTS_TO_WIN][2];
+        for (int i = 0; i < Engine.POINTS_TO_WIN; i++) {
+            firstNumber = RandomUtils.getRandomNumber();
+            secondNumber = RandomUtils.getRandomNumber();
+            randomExpression = listOfOperators[RandomUtils.getLimitedRandomNumber(NUMBER_OF_OPETAROTS)];
+            dataGame[i][Engine.DATA_QUESTION] = firstNumber + " " + randomExpression + " " + secondNumber;
+            dataGame[i][Engine.DATA_RIGHT_ANSWER] = String.valueOf(expression(firstNumber, secondNumber, randomExpression));
         }
-        Engine.checkAnswerWord(dataGame, gameDescription);
+        Engine.launchAnswerChecking(dataGame, gameDescription);
     }
 }
