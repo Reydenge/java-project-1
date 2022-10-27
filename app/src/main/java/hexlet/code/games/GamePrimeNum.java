@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.RandomUtils;
 
 import java.math.BigInteger;
 
@@ -14,17 +15,12 @@ public class GamePrimeNum {
 
     public static void identifyPrimeNumber() {
         int randomNumber;
-        String[][] dataGame = new String[Engine.pointsToWin][2];
-        Engine.greeting();
-        for (int i = 0; i < Engine.pointsToWin; i++) {
-            randomNumber = Engine.getRandomNumber();
-            dataGame[i][Engine.dataPlayerAnswer] = Integer.toString(randomNumber);
-            if (isPrime(randomNumber)) {
-                dataGame[i][Engine.dataRightAnswer] = "yes";
-            } else {
-                dataGame[i][Engine.dataRightAnswer] = "no";
-            }
+        String[][] dataGame = new String[Engine.POINTS_TO_WIN][2];
+        for (int i = 0; i < Engine.POINTS_TO_WIN; i++) {
+            randomNumber = RandomUtils.getRandomNumber();
+            dataGame[i][Engine.DATA_QUESTION] = Integer.toString(randomNumber);
+            dataGame[i][Engine.DATA_RIGHT_ANSWER] = isPrime(randomNumber) ? "yes" : "no";
         }
-        Engine.checkAnswerWord(dataGame, gameDescription);
+        Engine.launchAnswerChecking(dataGame, gameDescription);
     }
 }
