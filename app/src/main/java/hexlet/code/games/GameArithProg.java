@@ -5,10 +5,10 @@ import hexlet.code.RandomUtils;
 
 public class GameArithProg {
     public static String gameDescription = "What number is missing in the progression?\n";
-    public static int MAX_LENGTH_OF_PROGRESSION = 10;
-    public static int FIRST_ELEMENT_OF_PROGRESSION = 10;
-    public static int MAX_STEP_OF_PROGRESSION = 10;
-    public static int MAX_NUMBER_OF_MISSING_ELEMENT = 9;
+    public final static int MAX_LENGTH_OF_PROGRESSION = 10;
+    public final static int FIRST_ELEMENT_OF_PROGRESSION = 10;
+    public final static int MAX_STEP_OF_PROGRESSION = 10;
+    public final static int MAX_NUMBER_OF_MISSING_ELEMENT = 9;
 
     public static int[] getArithmeticProgression(int firstElement, int stepOfProgression, int lengthOfProgression) {
         int[] arithmeticProgression = new int[lengthOfProgression];
