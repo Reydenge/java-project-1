@@ -32,7 +32,7 @@ public class GameArithProg {
             stepOfProgression = RandomUtils.getLimitedRandomNumber(MAX_STEP) + 1;
             int[] arithmeticProgression = getArithmeticProgression(firstElem, stepOfProgression, MAX_LENGTH);
             int numberOfMissingElement = RandomUtils.getLimitedRandomNumber(MAX_NUMBER_OF_MISSING_ELEMENT);
-            StringBuilder tempElement = new StringBuilder();
+            StringBuilder tempElement = new StringBuilder(" ");
             for (int p = 0; p < MAX_LENGTH; p++) {
                 if (p == numberOfMissingElement) {
                     tempElement.append(".. ");
@@ -41,9 +41,9 @@ public class GameArithProg {
                     tempElement.append(" ");
                 }
             }
-            dataGame[j][Engine.DATA_QUESTION] = String.valueOf(tempElement);
+            dataGame[j][Engine.DATA_QUESTION] = tempElement.toString();
             dataGame[j][Engine.DATA_ANSWER] = Integer.toString(arithmeticProgression[numberOfMissingElement]);
         }
-        Engine.launchAnswerChecking(dataGame, gameDescription);
+        Engine.launch(dataGame, gameDescription);
     }
 }
