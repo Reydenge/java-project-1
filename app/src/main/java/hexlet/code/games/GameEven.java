@@ -15,6 +15,6 @@ public class GameEven {
             gameData[i][Engine.DATA_QUESTION] = Integer.toString(randomNumber);
             gameData[i][Engine.DATA_ANSWER] = isEven(randomNumber) ? "yes" : "no";
         }
-        Engine.launchAnswerChecking(gameData, gameDescription);
+        Engine.launch(gameData, gameDescription);
     }
 }
