@@ -11,7 +11,7 @@ public class GameCalc {
             case "+" -> firstNumber + secondNumber;
             case "-" -> firstNumber - secondNumber;
             case "*" -> firstNumber * secondNumber;
-            default -> throw new IllegalStateException("Unexpected operator");
+            default -> throw new RuntimeException("Unexpected operator");
         };
     }
     public static void calculation() {
@@ -26,6 +26,6 @@ public class GameCalc {
             dataGame[i][Engine.DATA_QUESTION] = firstNumber + " " + randomExpression + " " + secondNumber;
             dataGame[i][Engine.DATA_ANSWER] = String.valueOf(expression(firstNumber, secondNumber, randomExpression));
         }
-        Engine.launchAnswerChecking(dataGame, gameDescription);
+        Engine.launch(dataGame, gameDescription);
     }
 }
