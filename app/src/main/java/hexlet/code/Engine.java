@@ -7,11 +7,8 @@ public class Engine {
     public static final int DATA_QUESTION = 0;
     public static final int DATA_ANSWER = 1;
 
-    public static String playerAnswerString() {
-        Scanner in = new Scanner(System.in);
-        return in.nextLine();
-    }
-    public static void launchAnswerChecking(String[][] dataGame, String gameDescription) {
+
+    public static void launch(String[][] dataGame, String gameDescription) {
         int count = 0;
         String playerAnswer;
         Scanner in = new Scanner(System.in);
@@ -23,7 +20,7 @@ public class Engine {
         while (count < Engine.POINTS_TO_WIN) {
             System.out.println("Question: " + dataGame[count][DATA_QUESTION]);
             System.out.print("Your answer: ");
-            playerAnswer = playerAnswerString();
+            playerAnswer = in.nextLine();
             if (playerAnswer.equals(dataGame[count][DATA_ANSWER])) {
                 System.out.println("Correct!");
                 count++;
