@@ -21,6 +21,6 @@ public class GamePrimeNum {
             dataGame[i][Engine.DATA_QUESTION] = Integer.toString(randomNumber);
             dataGame[i][Engine.DATA_ANSWER] = isPrime(randomNumber) ? "yes" : "no";
         }
-        Engine.launchAnswerChecking(dataGame, gameDescription);
+        Engine.launch(dataGame, gameDescription);
     }
 }
