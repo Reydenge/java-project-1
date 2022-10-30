@@ -23,6 +23,6 @@ public class GameGCD {
             gameData[i][Engine.DATA_QUESTION] = firstNumber + " " + secondNumber;
             gameData[i][Engine.DATA_ANSWER] = Integer.toString(gcdOfTwoNumbers(firstNumber, secondNumber));
         }
-        Engine.launchAnswerChecking(gameData, gameDescription);
+        Engine.launch(gameData, gameDescription);
     }
 }
