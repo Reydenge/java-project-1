@@ -4,8 +4,8 @@ import hexlet.code.RandomUtils;
 
 public class GameCalc {
     private static String gameDescription = "What is the result of the expression?\n";
-    private static final int NUMBER_OF_OPERATORS = 3;
     private static String[] listOfOperators = {"+", "-", "*"};
+    private static final int NUMBER_OF_OPERATORS = listOfOperators.length;
     private static int expression(int firstNumber, int secondNumber, String operator) {
         return switch (operator) {
             case "+" -> firstNumber + secondNumber;
@@ -14,7 +14,7 @@ public class GameCalc {
             default -> throw new RuntimeException("Unexpected operator");
         };
     }
-    public static void calculation() {
+    public static void calculateExpression() {
         String randomExpression;
         int firstNumber;
         int secondNumber;

@@ -8,7 +8,7 @@ public class GameArithProg {
     public static final int MAX_LENGTH = 10;
     public static final int FIRST_ELEMENT = 10;
     public static final int MAX_STEP = 10;
-    public static final int MAX_NUMBER_OF_MISSING_ELEMENT = 9;
+    public static final int MAX_NUMBER_OF_MISSING_ELEMENT = MAX_LENGTH;
 
     public static int[] getArithmeticProgression(int firstElement, int stepOfProgression, int lengthOfProgression) {
         int[] arithmeticProgression = new int[lengthOfProgression];
@@ -22,7 +22,7 @@ public class GameArithProg {
         return arithmeticProgression;
     }
 
-    public static void createArithmeticProgression() {
+    public static void identifyMissingElement() {
         int firstElem;
         int stepOfProgression;
         String[][] dataGame = new String[Engine.POINTS_TO_WIN][2];
