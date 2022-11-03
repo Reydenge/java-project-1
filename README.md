@@ -7,23 +7,26 @@
 <a> Identify even number </a>
 </div>
 ---
+
 <a class=links href="https://asciinema.org/a/534712">Calculator </a>
 <div class=describtion>
 <a> Calculate the value of the mathematical expression </a>
 </div>
 ---
+
 <a class=links href="https://asciinema.org/a/534714">Greatest common divisor </a>
 <div class=describtion>
 <a> Determine the greatest common divisor of two numbers </a>
 </div>
 ---
+
 <a class=links href="https://asciinema.org/a/534715">Missing element of arithmetic progression </a>
 <div class=describtion>
 <a> Determine the missing element of an arithmetic progression </a>
 </div>
 ---
+
 <a class=links href="https://asciinema.org/a/534716">Prime Number </a>
 <div class=describtion>
 <a> Identify prime number </a>
 </div>
----
