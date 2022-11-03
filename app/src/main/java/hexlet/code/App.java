@@ -38,13 +38,13 @@ public class App {
                 GameEven.identifyEvenNumbers();
                 break;
             case GAME_CALCULATOR:
-                GameCalc.calculation();
+                GameCalc.calculateExpression();
                 break;
             case GAME_GCD:
                 GameGCD.calculateGCD();
                 break;
             case GAME_ARITHMETIC_PROGRESSION:
-                GameArithProg.createArithmeticProgression();
+                GameArithProg.identifyMissingElement();
                 break;
             case GAME_PRIME_NUMBER:
                 GamePrimeNum.identifyPrimeNumber();
